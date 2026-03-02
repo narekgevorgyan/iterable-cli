@@ -1,6 +1,6 @@
 # Iterable CLI
 
-> **Built by agents, for agents.** Command-line interface for the [Iterable API](https://api.iterable.com/api/docs), designed for AI agents.
+> **An experimental internal tool by [CoinStats](https://coinstats.app).** Command-line interface for the [Iterable API](https://api.iterable.com/api/docs), built by agents, for agents.
 
 ## Installation
 
