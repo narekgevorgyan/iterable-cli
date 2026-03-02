@@ -1,6 +1,16 @@
 # Iterable CLI & Marketing Agent
 
-A CLI tool and agent skills for the Iterable marketing automation platform.
+Experimental internal tool by CoinStats — a CLI and Claude Code skill for the Iterable marketing automation platform.
+
+- **GitHub**: `narekgevorgyan/iterable-cli`
+- **Install skill**: `npx skills add narekgevorgyan/iterable-cli`
+
+## Working Preferences
+
+- Bias toward action — minimal exploration before coding
+- Keep changes minimal and consolidated
+- TypeScript stack, zero-dependency preference
+- Manual testing by default (curl commands, `node dist/index.js ...`), not automated test suites
 
 ## Quick Start
 
@@ -143,10 +153,19 @@ iterable-cli/
 │   │   └── keychain.ts       # OS keychain integration
 │   ├── cli/commands/         # CLI command handlers
 │   └── utils/                # Output formatting
-├── skills/iterable/          # Claude Code skills
+├── skills/iterable/SKILL.md  # Consolidated Claude Code skill
 ├── agent/                    # Marketing agent prompt
+├── README.md
+├── .gitignore
 └── dist/                     # Compiled JavaScript
 ```
+
+## Destructive & Side-Effect Commands
+
+These commands send real communications or delete data — handle with care:
+
+- **Sends messages**: `send email|push|sms|inapp`, `campaigns trigger`, `campaigns schedule`, `journeys trigger`, `templates proof`
+- **Deletes data**: `users delete`, `lists delete`, `campaigns abort`
 
 ## Common Workflows
 
