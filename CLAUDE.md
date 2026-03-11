@@ -3,7 +3,7 @@
 Experimental internal tool by CoinStats — a CLI and Claude Code skill for the Iterable marketing automation platform.
 
 - **GitHub**: `narekgevorgyan/iterable-cli`
-- **Install skill**: `npx skills add narekgevorgyan/iterable-cli`
+- **Install skill**: `npx skills add narekgevorgyan/iterable-cli --skill iterable`
 
 ## Working Preferences
 

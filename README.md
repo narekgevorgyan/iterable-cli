@@ -7,13 +7,22 @@
 ```bash
 npm install
 npm run build
-npx skills add narekgevorgyan/iterable-cli  # load agent skill files
+npm link
+npx skills add narekgevorgyan/iterable-cli --skill iterable
+```
+
+This repo ships a single installable agent skill at `skills/iterable/SKILL.md`.
+
+If you have not added the skill yet, run:
+
+```bash
+npx skills add narekgevorgyan/iterable-cli --skill iterable
 ```
 
 ## Auth
 
 ```bash
-node dist/index.js auth login --key <apiKey>   # saves to OS keychain
+iterable auth login --key <apiKey>              # saves to OS keychain
 export ITERABLE_API_KEY=...                     # or env var
 ```
 
@@ -63,20 +72,20 @@ iterable auth <subcommand>                   # authentication
 
 **Use `--format json` for programmatic parsing:**
 ```bash
-node dist/index.js campaigns list --format json
+iterable campaigns list --format json
 ```
 
 **Chain commands for workflows:**
 ```bash
 # Create list → add users → trigger campaign
-node dist/index.js lists create "Promo Segment"
-node dist/index.js lists subscribe <listId> --emails "a@x.com,b@x.com"
-node dist/index.js campaigns trigger <campaignId> --list <listId>
+iterable lists create "Promo Segment"
+iterable lists subscribe <listId> --emails "a@x.com,b@x.com"
+iterable campaigns trigger <campaignId> --list <listId>
 ```
 
 **Track events with data payloads:**
 ```bash
-node dist/index.js events track --event "purchase" --email user@example.com --data '{"item": "widget", "value": 29.99}'
+iterable events track --event "purchase" --email user@example.com --data '{"item": "widget", "value": 29.99}'
 ```
 
 ## API Limitations
@@ -114,7 +123,8 @@ Some Iterable features are UI-only and **cannot** be done via CLI:
 ```bash
 npm install
 npm run build
-node dist/index.js --help
+npm link
+iterable --help
 ```
 
 See [CLAUDE.md](CLAUDE.md) for full command reference and architecture.
